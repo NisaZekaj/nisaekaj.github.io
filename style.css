@@ -1,82 +1,63 @@
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0a0a0a;
-  color: white;
-  text-align: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000;
+    color: white;
+    text-align: center;
 }
 
 .hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: radial-gradient(circle, #000000 0%, #0a0a0a 100%);
+    padding: 30px 20px 10px;
 }
 
-.ghost {
-  color: white;
-  font-size: 2.5rem;
-  font-weight: bold;
+.hero .gold {
+    color: #FFD700;
 }
 
-.ai {
-  color: #ffd700;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.subtitle {
-  margin-top: 0.5rem;
-  font-size: 1.1rem;
-  color: #ccc;
-}
-
-.bot-img {
-  width: 160px;
-  margin-top: 2rem;
-  animation: float 3s ease-in-out infinite;
+.bot-image {
+    width: 160px;
+    margin: 20px auto;
+    animation: float 2.5s ease-in-out infinite;
 }
 
 @keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
 }
 
-.marketing {
-  padding: 40px 20px;
-  background-color: #111;
+.scanner {
+    margin-top: 30px;
 }
 
-.marketing h2 {
-  font-size: 1.4rem;
-  margin-bottom: 20px;
+input[type="text"], input[type="email"], textarea {
+    width: 80%;
+    max-width: 350px;
+    padding: 12px;
+    margin: 8px auto;
+    display: block;
+    border-radius: 5px;
+    border: none;
 }
 
-.marketing input {
-  padding: 10px;
-  font-size: 1rem;
-  width: 80%;
-  max-width: 300px;
-  margin-bottom: 10px;
-  border: none;
-  border-radius: 4px;
+button {
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.marketing button {
-  background-color: #ffd700;
-  color: black;
-  padding: 10px 20px;
-  font-weight: bold;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+.status-text {
+    margin-top: 15px;
+    color: #FFD700;
+    font-weight: bold;
 }
 
-.marketing p {
-  margin-top: 20px;
-  font-size: 1rem;
-  color: #ffd700;
+.kontakt-formular {
+    padding: 40px 20px;
 }
