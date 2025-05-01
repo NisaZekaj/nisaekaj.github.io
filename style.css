@@ -7,62 +7,76 @@ body {
 }
 
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  background: radial-gradient(circle at center, #111 0%, #000 100%);
+  background: radial-gradient(circle, #000000 0%, #0a0a0a 100%);
 }
 
-.gold {
-  color: #FFD700;
+.ghost {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
 }
 
-.bot {
-  width: 200px;
-  margin: 20px 0;
+.ai {
+  color: #ffd700;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.subtitle {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.bot-img {
+  width: 160px;
+  margin-top: 2rem;
   animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
 }
 
-.form-container {
-  background: #1a1a1a;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
+.marketing {
+  padding: 40px 20px;
+  background-color: #111;
+}
+
+.marketing h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+}
+
+.marketing input {
+  padding: 10px;
+  font-size: 1rem;
   width: 80%;
   max-width: 300px;
-}
-
-input, button {
-  width: 100%;
-  padding: 10px;
-  margin: 5px 0;
+  margin-bottom: 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
-input {
-  background: #333;
-  color: white;
-}
-
-button {
-  background-color: #FFD700;
-  color: #000;
+.marketing button {
+  background-color: #ffd700;
+  color: black;
+  padding: 10px 20px;
   font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-#ergebnis {
-  margin-top: 10px;
-  color: #FFD700;
+.marketing p {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #ffd700;
 }
