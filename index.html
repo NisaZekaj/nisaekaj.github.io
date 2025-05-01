@@ -1,76 +1,32 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ghost.MarketingBot + Webhook</title>
-  <style>
-    body {
-      background: #0a0a0a;
-      font-family: Arial, sans-serif;
-      color: white;
-      text-align: center;
-      margin: 0;
-      padding: 2em;
-    }
-    .bot-image {
-      max-width: 200px;
-      margin: 2em auto;
-    }
-    input, textarea {
-      width: 90%;
-      max-width: 400px;
-      padding: 1em;
-      margin: 1em 0;
-      border-radius: 8px;
-      border: none;
-      font-size: 1em;
-    }
-    button {
-      background-color: #FFD700;
-      color: black;
-      padding: 1em 2em;
-      border: none;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 1em;
-      cursor: pointer;
-    }
-    .status {
-      margin-top: 1em;
-      color: #FFD700;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ghost.MarketingBot</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
 </head>
 <body>
-  <h1>Ghost.MarketingBot</h1>
-  <p>Automatisierter Kundenscanner für dich</p>
-  <img class="bot-image" src="https://raw.githubusercontent.com/NisaZekaj/ghostai-classic-/main/AI_bot_freigestellt.png" alt="GhostBot" />
-  
-  <h2>Wen möchtest du erreichen?</h2>
-  <input type="text" id="zielgruppe" placeholder="z.B. Fitness Coach, Online-Shop..."/><br>
-  <button onclick="starteScan()">MarketingBot starten</button>
+    <section class="hero">
+        <h1>Ghost.<span class="gold">MarketingBot</span></h1>
+        <p>Automatisierter Kundenscanner für dich</p>
+        <img src="https://raw.githubusercontent.com/NisaZekaj/ghostai-classic-/main/F4D5F994-3ED7-441C-BB67-7E6E7D3A9457.png" alt="AI Bot" class="bot-image" />
+    </section>
 
-  <div id="status" class="status"></div>
+    <section class="scanner">
+        <h2>Wen möchtest du erreichen?</h2>
+        <input type="text" id="zielgruppe" placeholder="z.B. Fitness Coach, Online-Shop..." />
+        <button onclick="starteBot()">MarketingBot starten</button>
+        <p id="status" class="status-text"></p>
+    </section>
 
-  <form id="kontaktformular" action="https://formsubmit.co/zekajdionisa@gmail.com" method="POST" style="display:none; margin-top:2em;">
-    <h2>Interessent erkannt – Kontaktdaten erfassen</h2>
-    <input type="text" name="name" placeholder="Name" required /><br>
-    <input type="email" name="email" placeholder="E-Mail" required /><br>
-    <textarea name="nachricht" placeholder="Was brauchst du?" required></textarea><br>
-    <input type="hidden" name="_captcha" value="false">
-    <button type="submit">Absenden</button>
-  </form>
-
-  <script>
-    function starteScan() {
-      const ziel = document.getElementById('zielgruppe').value;
-      document.getElementById('status').innerText = `Ghost.MarketingBot scannt das Netz nach: "${ziel}" ...`;
-      setTimeout(() => {
-        document.getElementById('status').innerText += '\nErste qualifizierte Leads entdeckt!';
-        document.getElementById('kontaktformular').style.display = 'block';
-      }, 3000);
-    }
-  </script>
+    <section id="kontaktformular" class="kontakt-formular" style="display:none;">
+        <h2>Interessent erkannt – Kontaktdaten erfassen</h2>
+        <input type="text" placeholder="Name" />
+        <input type="email" placeholder="E-Mail" />
+        <textarea placeholder="Was brauchst du?"></textarea>
+        <button>Absenden</button>
+    </section>
 </body>
 </html>
