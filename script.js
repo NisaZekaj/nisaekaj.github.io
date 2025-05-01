@@ -1,17 +1,13 @@
-function starteMarketingBot() {
-  const zielgruppe = document.getElementById("zielgruppe").value.trim();
-  const statusText = document.getElementById("statusText");
+function starteBot() {
+    const zielgruppe = document.getElementById("zielgruppe").value;
+    const status = document.getElementById("status");
+    const formular = document.getElementById("kontaktformular");
 
-  if (zielgruppe) {
-    statusText.textContent = `Ghost.MarketingBot scannt jetzt das Netz nach Kunden aus der Zielgruppe: "${zielgruppe}" ...`;
-    statusText.style.color = "#ffd700";
+    if (zielgruppe.trim() === "") {
+        status.textContent = "Bitte gib eine Zielgruppe ein.";
+        return;
+    }
 
-    // Hier später API oder Automation einsetzen
-    setTimeout(() => {
-      statusText.textContent += "\nErste Kontakte werden vorbereitet...";
-    }, 3000);
-  } else {
-    statusText.textContent = "Bitte gib eine Zielgruppe ein.";
-    statusText.style.color = "red";
-  }
+    status.textContent = `Ghost.MarketingBot scannt das Netz nach: "${zielgruppe}" ... Erste qualifizierte Leads entdeckt!`;
+    formular.style.display = "block";
 }
