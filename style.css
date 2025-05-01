@@ -12,20 +12,57 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: radial-gradient(circle at center, rgba(255, 215, 0, 0.1), #000);
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 
-.hero .gold {
+.gold {
   color: #FFD700;
 }
 
-.hero-bot {
-  margin-top: 30px;
-  width: 160px;
-  animation: float 4s ease-in-out infinite;
+.bot {
+  width: 200px;
+  margin: 20px 0;
+  animation: float 3s ease-in-out infinite;
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-20px); }
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.form-container {
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  width: 80%;
+  max-width: 300px;
+}
+
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+input {
+  background: #333;
+  color: white;
+}
+
+button {
+  background-color: #FFD700;
+  color: #000;
+  font-weight: bold;
+}
+
+#ergebnis {
+  margin-top: 10px;
+  color: #FFD700;
 }
